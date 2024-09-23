@@ -1,0 +1,17 @@
+# Ignore Excel output files
+*.xlsx
+
+# Ignore domain input files
+domains.txt
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore environment and configuration files
+.env
+.DS_Store
+
+# Ignore any other system-specific files
+.vscode/
+.idea/
