@@ -41,7 +41,9 @@ def save_to_excel(data, output_file):
 if __name__ == "__main__":
     csv_file = 'free-domains-2.csv'  # The CSV file containing valid domains
     valid_domains = fetch_valid_domains_from_csv(csv_file)
-    
+     
+    # The txt file containing the domains you want to check
     results = check_domains('domains.txt', valid_domains)
     
+    # Results are saved on excel file
     save_to_excel(results, 'domains-output.xlsx')
