@@ -30,20 +30,18 @@ def save_to_excel(data, output_file):
         workbook = writer.book
         worksheet = writer.sheets['Domains']
 
-        # Define a format for invalid cells
-        invalid_format = workbook.add_format({'bg_color': 'red', 'font_color': 'white'})
-
         # Highlight the cells in the 'isValid' column that are False
+        invalid_format = workbook.add_format({'bg_color': 'red', 'font_color': 'white'})
         for row_num, is_valid in enumerate(df['isValid']):
             if not is_valid:
                 worksheet.write(row_num + 1, 1, is_valid, invalid_format)  # +1 to skip header row
 
 if __name__ == "__main__":
-    csv_file = 'free-domains-2.csv'  # The CSV file containing valid domains
+    csv_file = 'free-domains-2.csv'  # The CSV file containing valid free domains from HubSpot https://knowledge.hubspot.com/forms/what-domains-are-blocked-when-using-the-forms-email-domains-to-block-feature
     valid_domains = fetch_valid_domains_from_csv(csv_file)
      
     # The txt file containing the domains you want to check
     results = check_domains('domains.txt', valid_domains)
     
     # Results are saved on excel file
-    save_to_excel(results, 'domains-output.xlsx')
+    save_to_excel(results, 'results.xlsx')
