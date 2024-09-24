@@ -31,15 +31,15 @@ pip install pandas XlsxWriter
 
 ## How to Use
 
-1. **Clone or Download the Project and Prepare your Data**
+1. **Clone or Download the Project and Prepare Your Data**
 
    - Clone the repository:
-     `bash 
-     git clone https://github.com/evitadasy/domain-checker.git 
-     `
-     or Alternatively, download the project:
-   - Go to the GitHub repository and click on "Code" > "Download ZIP".
-   - Extract the ZIP file to your desired location.
+     ```bash
+     git clone https://github.com/evitadasy/domain-checker.git
+     ```
+   - Alternatively, download the project:
+     - Go to the GitHub repository and click on "Code" > "Download ZIP".
+     - Extract the ZIP file to your desired location.
 
    Make sure you have a text file that contains the domains you want to analyze.
 
